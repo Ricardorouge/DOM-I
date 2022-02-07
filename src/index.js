@@ -73,7 +73,10 @@ contact.children[1].textContent = siteContent.contact.address;
 contact.children[2].textContent = siteContent.contact.phone;
 contact.children[3].textContent = siteContent.contact.email;
 
-
+// footer
+const footerA = document.querySelector('footer a');
+footerA.textContent = siteContent.footer.copyright;
+footerA.classList.toggle('bold');
 
 
 console.log('project wired!')
