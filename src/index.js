@@ -39,4 +39,12 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+// NAV
+const navA = document.querySelectorAll('nav a');
+const navATexts = Object.values(siteContent.nav);
+navA.forEach((link,index)=>{
+  link.textContent = navATexts[index];
+  link.classList.toggle('italic');
+})
+
 console.log('project wired!')
