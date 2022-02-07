@@ -47,4 +47,11 @@ navA.forEach((link,index)=>{
   link.classList.toggle('italic');
 })
 
+// CTA
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1;
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button;
+
+
+
+
 console.log('project wired!')
