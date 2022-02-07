@@ -78,5 +78,16 @@ const footerA = document.querySelector('footer a');
 footerA.textContent = siteContent.footer.copyright;
 footerA.classList.toggle('bold');
 
+//images
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent.images['logo-img'];
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.images['cta-img'];
+
+const accentImg = document.querySelector('#middle-img');
+accentImg.src = siteContent.images['accent-img'];
+
+
 
 console.log('project wired!')
