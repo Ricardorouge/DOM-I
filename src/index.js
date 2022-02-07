@@ -39,4 +39,55 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+// NAV
+const navA = document.querySelectorAll('nav a');
+const navATexts = Object.values(siteContent.nav);
+navA.forEach((link,index)=>{
+  link.textContent = navATexts[index];
+  link.classList.toggle('italic');
+})
+
+// CTA
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1;
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button;
+
+//main-content
+const topContent = document.querySelector('.top-content');
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content'];
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4'];
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+const bottomContent = document.querySelector('.bottom-content');
+bottomContent.children[0].children[0].textContent = siteContent['main-content']['services-h4'];
+bottomContent.children[0].children[1].textContent = siteContent['main-content']['services-content'];
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['product-h4'];
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['product-content'];
+bottomContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+bottomContent.children[2].children[1].textContent = siteContent['main-content']['vision-content'];
+
+//contact
+const contact = document.querySelector('.contact');
+contact.children[0].textContent = siteContent.contact['contact-h4'];
+contact.children[1].textContent = siteContent.contact.address;
+contact.children[2].textContent = siteContent.contact.phone;
+contact.children[3].textContent = siteContent.contact.email;
+
+// footer
+const footerA = document.querySelector('footer a');
+footerA.textContent = siteContent.footer.copyright;
+footerA.classList.toggle('bold');
+
+//images
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent.images['logo-img'];
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.images['cta-img'];
+
+const accentImg = document.querySelector('#middle-img');
+accentImg.src = siteContent.images['accent-img'];
+
+
+
 console.log('project wired!')
